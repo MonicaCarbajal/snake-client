@@ -19,6 +19,8 @@ const connect = function () {
   conn.on("connect", () => {
     conn.write("Successfully connected to game server");
     conn.write("Name: MCU");
+    // conn.write("Move: up");
+   
   });
 
   return conn;
