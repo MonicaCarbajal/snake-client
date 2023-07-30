@@ -18,17 +18,23 @@ const handleUserInput = function (key) {
     // If the input is ctrl + c (SIGINT), terminate the game and exit
     process.exit();
   } else if (key === 'w') {
-    // If 'w' is pressed, send "Move: up" command to the server
+    // If 'w' is pressed, send "Move: up" 
     connection.write("Move: up");
   } else if (key === 'a') {
-    // If 'a' is pressed, send "Move: left" command to the server
+    // If 'a' is pressed, send "Move: left" 
     connection.write("Move: left");
   } else if (key === 's') {
-    // If 's' is pressed, send "Move: down" command to the server
+    // If 's' is pressed, send "Move: down" 
     connection.write("Move: down");
   } else if (key === 'd') {
-    // If 'd' is pressed, send "Move: right" command to the server
+    // If 'd' is pressed, send "Move: right" 
     connection.write("Move: right");
+  } else if (key === 'q') {
+    // If 'q' is pressed, send "Say: Hello! What's up?" 
+    connection.write("Say: Hello! What's up?");
+  } else if (key === 'e') {
+    // If 'e' is pressed, send "Say: It's me!" 
+    connection.write("Say: It's me!");
   }
 };
 
